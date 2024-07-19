@@ -3,25 +3,15 @@
 import React, { useState } from 'react'
 type Props = {}
 import {
-    AlertCircle,
-    Archive,
     ArchiveX,
-    ChevronDown,
     ChevronRight,
     File,
     Inbox,
-    MessagesSquare,
-    Search,
     Send,
-    ShoppingCart,
-    Trash2,
-    Users2,
   } from "lucide-react"
 
 import {
-    useWindowSize,
     useWindowWidth,
-    useWindowHeight,
   } from '@react-hook/window-size'
 import { Nav } from './ui/nav'
 import { Button } from './ui/button';
