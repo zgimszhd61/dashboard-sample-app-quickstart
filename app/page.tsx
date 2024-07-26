@@ -1,5 +1,5 @@
 import BarChart from "@/components/BarChart";
-import Card, { CardContent, CardProps } from "@/components/Card";
+import Card, { CardContent, CardProps, Header } from "@/components/Card";
 import SalesCard, {SalesProps } from "@/components/SalesCard";
 import PageTitle from "@/components/PageTitle";
 import { DollarSign } from "lucide-react";
@@ -45,6 +45,7 @@ const cardData:CardProps[] = [
 export default function Home() {
   return (
     <div className="flex flex-col gap-5 w-full">
+      {/* <Header /> */}
       <PageTitle title="HomePage" />
       <section className="grid w-full grid-cols-1 gap-4 gap-x-8 transition-all sm:grid-cols-2 xl:grid-cols-4">
           {cardData.map((d,i)=> 
@@ -60,6 +61,7 @@ export default function Home() {
           <RentSale title={"Rent Sale"} />
         </CardContent>
       </section>
+      
     </div>
 
   );
