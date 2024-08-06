@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import SideNavbar from "@/components/SideNavbar";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "niufto2iq0");
+            `,
+          }}
+        />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-7V3QEVSDMH"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-7V3QEVSDMH');
+            `,
+          }}
+        />
+      </Head>
       <body className={cn("min-h-screen w-full bg-white text-black flex ",inter.className,{'debug-screens':process.env.NODE_ENV === 'development'})}>
         {/* sidebar */}
         <SideNavbar />
